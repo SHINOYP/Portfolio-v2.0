@@ -20,8 +20,8 @@ export default function projects(){
             </div>              
             <div className="flex flex-wrap mx-6" >
                 <ProjectBox/>
-                <projectBox/>  
-                <projectBox/>           
+                <ProjectBox/>  
+                <ProjectBox/>          
             </div>
         </section>
         <section className=" mx-auto m-10   width_limit">
@@ -31,9 +31,9 @@ export default function projects(){
                 </div>
             </div>
             <div className="flex flex-wrap mx-6" >
-                <projectBox/> 
-                <projectBox/>  
-                <projectBox/>            
+                <ProjectBox/>
+                <ProjectBox/>  
+                <ProjectBox/>           
             </div>         
         </section>
       </motion.div>

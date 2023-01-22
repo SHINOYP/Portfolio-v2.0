@@ -34,10 +34,10 @@ export default function navbar(){
                 
                 <nav className="nav  " >
                     <ul className="list">
-                    <li className="item "> <a href="./" className="px-3 link hover:border-x-4 py-2 my-2 "><span > #</span>home</a></li>
-                    <li className="item"> <a href="./project" className="px-3  link hover:border-x-4 py-2 my-2"><span > #</span>works</a> </li>
-                    <li className="item"> <a href="./About" className="px-3   link hover:border-x-4 py-2 my-2"><span > #</span>about-me</a> </li>
-                    <li className="item"> <a href="./Contact" className="px-3 link hover:border-x-4 py-2 my-2  text-white"><span > #</span>contact</a> </li>
+                    <li className="item "> <Link to="./"  className="px-3 link hover:border-x-4 py-2 my-2 "><span > #</span>home</Link></li>
+                    <li className="item"> <Link to="./Project" className="px-3  link hover:border-x-4 py-2 my-2"><span > #</span>works</Link> </li>
+                    <li className="item"> <Link to="./About" className="px-3   link hover:border-x-4 py-2 my-2"><span > #</span>about-me</Link> </li>
+                    <li className="item"> <Link to="./Contact" className="px-3 link hover:border-x-4 py-2 my-2  text-white"><span > #</span>contact</Link> </li>
                     </ul>
                     <div className="absolute flex items-center align-center" style={{ top: '680px' , left:'110px' }}>
                         <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"className=" mx-2"><img src={Gmail} alt=""></img> </a>
