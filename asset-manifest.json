@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Portfolio-v2.0/static/css/main.9d00d6e3.css",
+    "main.js": "/Portfolio-v2.0/static/js/main.326ee14c.js",
+    "static/media/bg-2.svg": "/Portfolio-v2.0/static/media/bg-2.f89be5430579710c58c3c17506a5ab81.svg",
+    "static/media/working.png": "/Portfolio-v2.0/static/media/working.d2dd5152bb8e4302b3a2.png",
+    "static/media/sit.svg": "/Portfolio-v2.0/static/media/sit.0fee34bf337379f37fa5e9464c6e9beb.svg",
+    "static/media/skill-bg.svg": "/Portfolio-v2.0/static/media/skill-bg.5480bf56cf8ea7c26508978c3fdba184.svg",
+    "static/media/linkedin.svg": "/Portfolio-v2.0/static/media/linkedin.34737bacf123485d4b7263717a09fc1b.svg",
+    "static/media/discord.svg": "/Portfolio-v2.0/static/media/discord.278677d2dd13fa61ecda3dacb3bf56da.svg",
+    "static/media/box.svg": "/Portfolio-v2.0/static/media/box.8ab15c705b9879e05375d4ea69c7d363.svg",
+    "static/media/git.svg": "/Portfolio-v2.0/static/media/git.a21246b9d0a62d405ae57a341330996f.svg",
+    "static/media/gmail.svg": "/Portfolio-v2.0/static/media/gmail.b13b46cda160a0da14bf2ccfda56cd9d.svg",
+    "index.html": "/Portfolio-v2.0/index.html",
+    "static/media/instagram.svg": "/Portfolio-v2.0/static/media/instagram.bd16292a61cac6b81b90fdfe152345dc.svg",
+    "main.9d00d6e3.css.map": "/Portfolio-v2.0/static/css/main.9d00d6e3.css.map",
+    "main.326ee14c.js.map": "/Portfolio-v2.0/static/js/main.326ee14c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d00d6e3.css",
+    "static/js/main.326ee14c.js"
+  ]
+}
