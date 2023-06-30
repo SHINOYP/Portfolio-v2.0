@@ -1,20 +1,17 @@
-import {BrowserRouter as Router} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./Components/navbar";
 import Footer from "./Components/footer";
-import AnimatedRoutes from "../src/Components/AnimatedRoutes"
+import AnimatedRoutes from "../src/Components/AnimatedRoutes";
 const React = require("react");
 
-
-
-export default function App(){
-
-  return(
+export default function App() {
+  return (
     <div className="App">
       <Router>
-        <Navbar/>
-        <AnimatedRoutes/>
-        <Footer/>
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
       </Router>
     </div>
-  )
+  );
 }
