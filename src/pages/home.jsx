@@ -63,12 +63,12 @@ export default function Home() {
           <div className="border mx-auto  mt-6 p-4 ">
             <h1 className="text-xs md:text-base">
               {" "}
-              Believe me Consistency is the key to success !
+               Consistency is the key to success !
             </h1>
           </div>
           <div className=" mx-auto ">
             <h1 className="-bottom-0  border  md:ml-96 md:px-6  text-wid  p-1 text-xs">
-              -nerd{" "}
+              -____{" "}
             </h1>
           </div>
         </div>
