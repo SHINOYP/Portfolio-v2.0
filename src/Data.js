@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "1",
     name: "Gixxel",
-    link: "abc",
+    link: "https://github.com/SHINOYP/Gixxel",
     image: require("./img/screenshots/Gixxel.png"),
     description:
       "With Gixxel, you can explore a vast collection of movies, discover new releases, and access detailed information about your favorite films.",
@@ -10,16 +10,16 @@ export const projects = [
   {
     id: "2",
     name: "LMS",
-    link: "abc",
+    link: "https://github.com/SHINOYP/LMS-Learning-Management-System-",
     image: require("./img/screenshots/Lms.png"),
     description: "Learning management System",
   },
   {
     id: "3",
-    name: "E-commerce two",
-    link: "abc",
+    name: "E-commerce ",
+    link: "https://github.com/SHINOYP/Pedia",
     image: require("./img/screenshots/Ecommerce.png"),
-    description: "E-Commece app",
+    description: "E-Commece app(work in progress..)",
   },
   {
     id: "4",

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SIT_img from "../img/sit.svg";
 import Coming_soon from "../img/working.png";
 import Skill from "../img/skill-bg.svg";
@@ -10,12 +11,30 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import bg2 from "../img/bg-2.svg";
 import { useNavigate } from "react-router-dom";
-import ProjectBox from "../Components/project_Box";
+import ProjectBox from "../Components/ProjectCard/project_Box";
 import SelfPotrait from '../img/mine.png'
-
+import BlobAnimation from '../Components/BlobAnimation/BlobAnimation'
+import TyingAnimation from '../Components/TypingAnimation'
 const React = require("react");
 
 export default function Home() {
+  const [text, setText] = useState('');
+  const fullText = 'Web developer';
+
+  useEffect(() => {
+    let currentIndex = 0;
+
+    const typingEffect = () => {
+      if (currentIndex < fullText.length) {
+        setText((prevText) => prevText + fullText[currentIndex]);
+        currentIndex++;
+        setTimeout(typingEffect, 100); // Adjust typing speed here (milliseconds)
+      }
+    };
+
+    typingEffect();
+  }, []);
+
   useEffect(() => {
     Aos.init({ duration: 2000 });
     window.scrollTo(0, 0);
@@ -32,10 +51,12 @@ export default function Home() {
           <div className="mt-20 ml-2 md:ml-10 font-semibold ">
             <h1 className="md:text-5xl text-4xl">
               {" "}
-              hi iam a{" "}
+
+              <TyingAnimation text={'hi iam a'} speed={'100'}/>
               <span>
                 {" "}
-                <br /> web developer
+                <br /> 
+                <TyingAnimation text={'Web Developer'} speed={'200'}/>
               </span>
             </h1>
             <p className=" my-2 text-base md:text-lg ">
@@ -49,12 +70,13 @@ export default function Home() {
             </form>
           </div>
           <div className="m-10 flex-col ">
-            <img src={SelfPotrait} data-aos="zoom-out"  className="rounded-full sm:w-2/3  " alt=""></img>
-            <div className="flex w-fit border-2 border-zinc-400 ml-3  xl:ml-16">           
+            <BlobAnimation/>
+            {/* <img src={SelfPotrait} data-aos="zoom-out"  className="rounded-full sm:w-2/3  " alt=""></img> */}
+            {/* <div className="flex w-fit border-2 border-zinc-400 ml-3  xl:ml-16">           
               <p className="flex mx-auto    text-xs align-center md:mx-10 mx-1">
                 Currently working on improving skills.
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -116,25 +138,25 @@ export default function Home() {
             data-aos="fade-up"
             className="md:flex  md:ml-4 m-2  flex-col md:flex-row"
           >
-            <div className=" pic hide md:w-40  h-32 border border-purple-700 m-2 ">
+            <div className=" text-lg  pic hide md:w-40  h-32 border border-purple-700 m-2 ">
               <h3 className=" border-b-2 border-b text-white p-2">Languages</h3>
               {/* &nbsp;&nbsp;C &nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp; */}
               &nbsp;Html&nbsp;&nbsp;&nbsp;Css &nbsp;JavaScript&nbsp;
-              &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;C,C++
             </div>
             <div
               data-aos="fade-up"
-              className=" pic hide md:w-40 h-32 border border-purple-700 m-2"
+              className=" text-lg pic hide md:w-40 h-32 border border-purple-700 m-2"
             >
               <h3 className=" border-b-2 border-b text-white p-2">Databases</h3>
               &nbsp;&nbsp;Mysql &nbsp;&nbsp;MongoDb&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
             <div
               data-aos="fade-up"
-              className=" pic hide md:w-40 h-32 border border-purple-700 m-2"
+              className=" pic  text-lg hide md:w-40 h-32 border border-purple-700 m-2"
               style={{ width: "auto" }}
             >
-              <h3 className=" border-b-2 border-b text-white p-2">Tools</h3>
+              <h3 className=" border-b-2 border-b text-white text-xl p-2">Tools</h3>
               &nbsp;&nbsp;React&nbsp;&nbsp;&nbsp;&nbsp;Tailwind&nbsp;&nbsp;&nbsp;&nbsp;Node.js&nbsp;
               &nbsp;&nbsp;Express
             </div>

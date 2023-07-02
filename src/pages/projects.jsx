@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import ProjectBox from "../Components/project_Box";
+import ProjectBox from "../Components/ProjectCard/project_Box";
 import { motion } from "framer-motion";
 import { projects } from "../Data";
 const React = require("react");

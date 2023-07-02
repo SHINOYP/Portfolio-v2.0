@@ -1,0 +1,54 @@
+.blob-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .blob {
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 30% 30% 70% / 60% 40% 60% 40%;
+    background-color: #f57c00;
+    position: relative;
+    background-image: url('/src//img/mine.png');
+    background-size: cover;
+    @media(max-width:767px){
+        width: 200px;
+        height: 200px;
+    }
+  }
+  /* styles.css */
+@keyframes blobAnimation {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(4px) translateY(-10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .blob {
+    /* Previous styles */
+    animation: blobAnimation 5s infinite;
+  }
+
+/* styles.css */
+.blob-behind {
+    width: 300px;
+    height: 300px;
+    border-radius: 50% 30% 50% 70% / 60% 40% 60% 40%;
+    background-color: rgb(126 34 206);
+    position: absolute;
+    z-index: -1;
+    top: 10px; /* Adjust the positioning based on your needs */
+    left: 10px; /* Adjust the positioning based on your needs */
+    @media(max-width:767px){
+        width: 200px;
+        height: 200px;
+        top: 10px; 
+        left: 60px
+    }
+  }
