@@ -31,7 +31,7 @@ export const projects = [
   {
     id: "5",
     name: "Adam car Rental ",
-    link: "https://adam-authentication.firebaseapp.com/",
+    link: "https://shinoyp.github.io",
     image: require("./img/screenshots/Adam.png"),
     description: "Car Rental Invoice printing application",
   },
