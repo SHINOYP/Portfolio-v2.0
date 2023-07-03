@@ -115,8 +115,8 @@ export default function Home() {
 
         <div className="flex flex-wrap mx-6 ">
           {projects?.map((pr) => (
-            <div key={pr._id} data-aos="fade-right">
-              <ProjectBox key={pr.id} data={pr} />
+            <div  key={pr.id} data-aos="fade-right">
+              <ProjectBox  key={pr.id} data={pr} />
             </div>
           ))}
         </div>

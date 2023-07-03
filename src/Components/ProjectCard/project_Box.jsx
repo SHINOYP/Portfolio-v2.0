@@ -10,7 +10,7 @@ export default function Project_box({ data }) {
   useEffect(() => {
     Aos.init({ duration: 2000 });
   }, []);
-  console.log(data.image);
+ 
 
   return (
     <div className="flip-card">

@@ -87,7 +87,7 @@ export default function Contact() {
                 shinoy._.p{" "}
               </a>
               <br />
-              <img src={Git} className="mb-2 m-1  inline " alt=""></img>
+              <img src={Git} Name="mb-2 m-1  inline " alt=""></img>
               <a href="https://discord.com/login" className="hover:text-white">
                 shino
               </a>
