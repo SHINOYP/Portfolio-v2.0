@@ -36,14 +36,14 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 800 });
     window.scrollTo(0, 0);
   }, []);
   const navigate = useNavigate();
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transitionDuration: 1 }}
+      animate={{ opacity: 1, transitionDuration: 0.5 }}
       exit={{ opacity: 0 }}
     >
       <section>
@@ -113,9 +113,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex flex-wrap mx-6 ">
+        <div className="flex flex-wrap mx-6 mt-10 sm:mt-0 ">
           {projects?.map((pr) => (
-            <div  key={pr.id} data-aos="fade-right">
+            <div  key={pr.id} data-aos="">
               <ProjectBox  key={pr.id} data={pr} />
             </div>
           ))}
@@ -138,11 +138,11 @@ export default function Home() {
             data-aos="fade-up"
             className="md:flex  md:ml-4 m-2  flex-col md:flex-row"
           >
-            <div className=" text-lg  pic hide md:w-40  h-32 border border-purple-700 m-2 ">
+            <div className=" text-md font-bold  pic hide md:w-40  h-32 border border-purple-700 m-2 ">
               <h3 className=" border-b-2 border-b text-white p-2">Languages</h3>
               {/* &nbsp;&nbsp;C &nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp; */}
-              &nbsp;Html&nbsp;&nbsp;&nbsp;Css &nbsp;JavaScript&nbsp;
-              &nbsp;&nbsp;&nbsp;C,C++
+              &nbsp;&nbsp;Html&nbsp;&nbsp;&nbsp;Css &nbsp;JavaScript&nbsp;
+              &nbsp;C,C++
             </div>
             <div
               data-aos="fade-up"
@@ -197,7 +197,7 @@ export default function Home() {
             </form>
           </div>
           <div className="m-20 md:m-10 ">
-            <img src={bg2} alt=""></img>
+            <img src={bg2}  data-aos="fade-up" alt=""></img>
           </div>
         </div>
       </section>
@@ -220,12 +220,13 @@ export default function Home() {
           </div>
           <div className="md:m-10  m-4">
             <div
-              className=" w-64 h-32 border  md:m-2 pic hide  "
-              data-aos="zoom-in"
+              className=" w-64 h-32 border  md:m-2 pic hide -z-20  "
+              data-aos="fade-up"
             >
-              <p className=" font-bold mx-4 text-white text-xs md:text-base">
+              <p className=" mt-2 font-bold mx-4 text-white text-xs md:text-base">
                 Message me here
               </p>
+              <div className="p-2">
               <img
                 src={Gmail}
                 className="m-2 inline hover:text-white"
@@ -245,6 +246,7 @@ export default function Home() {
               >
                 falcon #0900
               </a>
+              </div>
             </div>
           </div>
         </div>

@@ -9,7 +9,7 @@ const React = require("react");
 
 export default function About() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 800 });
     window.scrollTo(0, 0);
   }, []);
   return (
@@ -62,13 +62,14 @@ export default function About() {
             </p>
           </div>
           <div className="md:m-10  m-4">
-            <div
-              className=" w-64 h-32 border  md:m-2 pic hide "
-              data-aos="zoom-in"
+          <div
+              className=" w-64 h-32 border  md:m-2 pic hide -z-20  "
+              data-aos="fade-up"
             >
-              <p className=" font-bold mx-4 text-white text-sm md:text-base">
+              <p className=" mt-2 font-bold mx-4 text-white text-xs md:text-base">
                 Message me here
               </p>
+              <div className="p-2">
               <img
                 src={Gmail}
                 className="m-2 inline hover:text-white"
@@ -76,14 +77,19 @@ export default function About() {
               ></img>
               <a
                 href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
-                className="hover:text-white"
+                className="hover:text-white text-xs md:text-base "
               >
                 shinoyshinoo@gmail.com{" "}
               </a>
-              <img src={Disc} className="m-2 inline " alt=""></img>
-              <a href="https://discord.com/login" className="hover:text-white">
+              <br />
+              <img src={Disc}  data-aos="fade-up" className="m-2 inline  " alt=""></img>
+              <a
+                href="https://discord.com/login"
+                className="hover:text-white text-xs md:text-base"
+              >
                 falcon #0900
               </a>
+              </div>
             </div>
           </div>
         </div>

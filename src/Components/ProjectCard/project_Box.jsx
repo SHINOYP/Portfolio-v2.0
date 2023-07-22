@@ -8,7 +8,7 @@ const React = require("react");
 
 export default function Project_box({ data }) {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
   }, []);
  
 

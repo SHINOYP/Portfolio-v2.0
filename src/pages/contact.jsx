@@ -11,7 +11,7 @@ const React = require("react");
 
 export default function Contact() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    Aos.init({ duration: 1000 });
     window.scrollTo(0, 0);
   }, []);
   return (
@@ -39,14 +39,14 @@ export default function Contact() {
           </div>
           <div className="md:m-10 flex flex-col md:flex-row ">
             <div
-              className="  border   pic hide mt-10 ml-2 text-xs md:text-base  "
-              data-aos="zoom-in"
+              className="  border p-1   pic hide mt-10 ml-2 text-xs md:text-base  "
+              data-aos="fade-up"
               style={{ zIndex: 0, height: "9rem", width: "18rem" }}
             >
-              <p className="mt-2 font-bold mx-4 text-white ">Message me here</p>
+              <p className="mt-1 font-bold mx-2 text-white ">Message me here</p>
               <img
                 src={Gmail}
-                className="m-2 inline hover:text-white"
+                className="m-2  inline hover:text-white"
                 alt=""
               ></img>
               <a
@@ -71,13 +71,13 @@ export default function Contact() {
             </div>
             <div
               className=" border m-20   pic hide  text-xs md:text-base "
-              data-aos="zoom-in"
+              data-aos="fade-up"
               style={{ zIndex: 10, width: "18rem", height: "8rem" }}
             >
-              <p className=" font-bold mx-4 text-white ">Also here</p>
+              <p className=" font-bold mx-4 text-white  mt-2">Also here</p>
               <img
                 src={Inst}
-                className="m-2 inline hover:text-white"
+                className="m-2 pl-1 inline hover:text-white"
                 alt=""
               ></img>
               <a
@@ -87,7 +87,7 @@ export default function Contact() {
                 shinoy._.p{" "}
               </a>
               <br />
-              <img src={Git} Name="mb-2 m-1  inline " alt=""></img>
+              <img src={Git} className="mb-2 m-1 pl-1  inline " alt=""></img>
               <a href="https://discord.com/login" className="hover:text-white">
                 shino
               </a>

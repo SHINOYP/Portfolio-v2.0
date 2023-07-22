@@ -6,7 +6,7 @@ const React = require("react");
 export default function footer() {
   const date = new Date().getFullYear();
   return (
-    <footer className="sticky footer flex justify-between  items-center mx-auto py-7 text-lg border-t-2 border-t-white  width_limit">
+    <footer className="sticky footer flex justify-between z-10 items-center mx-auto py-7 text-lg border-t-2 border-t-white  width_limit">
       <div className="md:ml-10 ml-2 ">
         <small className="text-xs">&copy; Copyright {date} ,Shino</small>
       </div>

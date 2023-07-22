@@ -2,9 +2,11 @@
 .flip-card {
     perspective: 1000px;
     width: 400px;
-    height: 400px;
+    height: 300px;
+    margin-top: 3rem;
     @media(max-width:767px) {
         width: 80vw;
+        height: 250px;
     }
   }
   
