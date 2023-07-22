@@ -62,7 +62,7 @@ export default function About() {
             </p>
           </div>
           <div className="md:m-10  m-4">
-          <div
+            <div
               className=" w-64 h-32 border  md:m-2 pic hide -z-20  "
               data-aos="fade-up"
             >
@@ -70,25 +70,30 @@ export default function About() {
                 Message me here
               </p>
               <div className="p-2">
-              <img
-                src={Gmail}
-                className="m-2 inline hover:text-white"
-                alt=""
-              ></img>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
-                className="hover:text-white text-xs md:text-base "
-              >
-                shinoyshinoo@gmail.com{" "}
-              </a>
-              <br />
-              <img src={Disc}  data-aos="fade-up" className="m-2 inline  " alt=""></img>
-              <a
-                href="https://discord.com/login"
-                className="hover:text-white text-xs md:text-base"
-              >
-                falcon #0900
-              </a>
+                <img
+                  src={Gmail}
+                  className="m-2 inline hover:text-white"
+                  alt=""
+                ></img>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
+                  className="hover:text-white text-xs md:text-base "
+                >
+                  shinoyshinoo@gmail.com{" "}
+                </a>
+                <br />
+                <img
+                  src={Disc}
+                  data-aos="fade-up"
+                  className="m-2 inline  "
+                  alt=""
+                ></img>
+                <a
+                  href="https://discord.com/login"
+                  className="hover:text-white text-xs md:text-base"
+                >
+                  falcon #0900
+                </a>
               </div>
             </div>
           </div>

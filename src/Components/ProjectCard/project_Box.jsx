@@ -10,7 +10,6 @@ export default function Project_box({ data }) {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
- 
 
   return (
     <div className="flip-card">
@@ -35,8 +34,16 @@ export default function Project_box({ data }) {
           </div>
         </div>
         <div class="flip-card-back">
-          <a href={data.link}><GitHubIcon  sx={{fontSize:'3rem'}} className="m-3 hover:text-purple-500"/></a>
-          <LiveTvIcon  sx={{fontSize:'3rem'}} className="m-3 hover:text-purple-500"/>
+          <a href={data.link}>
+            <GitHubIcon
+              sx={{ fontSize: "3rem" }}
+              className="m-3 hover:text-purple-500"
+            />
+          </a>
+          <LiveTvIcon
+            sx={{ fontSize: "3rem" }}
+            className="m-3 hover:text-purple-500"
+          />
         </div>
       </div>
     </div>

@@ -12,14 +12,14 @@ import "aos/dist/aos.css";
 import bg2 from "../img/bg-2.svg";
 import { useNavigate } from "react-router-dom";
 import ProjectBox from "../Components/ProjectCard/project_Box";
-import SelfPotrait from '../img/mine.png'
-import BlobAnimation from '../Components/BlobAnimation/BlobAnimation'
-import TyingAnimation from '../Components/TypingAnimation'
+import SelfPotrait from "../img/mine.png";
+import BlobAnimation from "../Components/BlobAnimation/BlobAnimation";
+import TyingAnimation from "../Components/TypingAnimation";
 const React = require("react");
 
 export default function Home() {
-  const [text, setText] = useState('');
-  const fullText = 'Web developer';
+  const [text, setText] = useState("");
+  const fullText = "Web developer";
 
   useEffect(() => {
     let currentIndex = 0;
@@ -51,12 +51,11 @@ export default function Home() {
           <div className="mt-20 ml-2 md:ml-10 font-semibold ">
             <h1 className="md:text-5xl text-4xl">
               {" "}
-
-              <TyingAnimation text={'hi iam a'} speed={'100'}/>
+              <TyingAnimation text={"hi iam a"} speed={"100"} />
               <span>
                 {" "}
-                <br /> 
-                <TyingAnimation text={'Web Developer'} speed={'200'}/>
+                <br />
+                <TyingAnimation text={"Web Developer"} speed={"200"} />
               </span>
             </h1>
             <p className=" my-2 text-base md:text-lg ">
@@ -70,7 +69,7 @@ export default function Home() {
             </form>
           </div>
           <div className="m-10 flex-col ">
-            <BlobAnimation/>
+            <BlobAnimation />
             {/* <img src={SelfPotrait} data-aos="zoom-out"  className="rounded-full sm:w-2/3  " alt=""></img> */}
             {/* <div className="flex w-fit border-2 border-zinc-400 ml-3  xl:ml-16">           
               <p className="flex mx-auto    text-xs align-center md:mx-10 mx-1">
@@ -85,7 +84,7 @@ export default function Home() {
           <div className="border mx-auto  mt-6 p-4 ">
             <h1 className="text-xs md:text-base">
               {" "}
-               Consistency is the key to success !
+              Consistency is the key to success !
             </h1>
           </div>
           <div className=" mx-auto ">
@@ -115,8 +114,8 @@ export default function Home() {
 
         <div className="flex flex-wrap mx-6 mt-10 sm:mt-0 ">
           {projects?.map((pr) => (
-            <div  key={pr.id} data-aos="">
-              <ProjectBox  key={pr.id} data={pr} />
+            <div key={pr.id} data-aos="">
+              <ProjectBox key={pr.id} data={pr} />
             </div>
           ))}
         </div>
@@ -156,7 +155,9 @@ export default function Home() {
               className=" pic  text-lg hide md:w-40 h-32 border border-purple-700 m-2"
               style={{ width: "auto" }}
             >
-              <h3 className=" border-b-2 border-b text-white text-xl p-2">Tools</h3>
+              <h3 className=" border-b-2 border-b text-white text-xl p-2">
+                Tools
+              </h3>
               &nbsp;&nbsp;React&nbsp;&nbsp;&nbsp;&nbsp;Tailwind&nbsp;&nbsp;&nbsp;&nbsp;Node.js&nbsp;
               &nbsp;&nbsp;Express
             </div>
@@ -197,7 +198,7 @@ export default function Home() {
             </form>
           </div>
           <div className="m-20 md:m-10 ">
-            <img src={bg2}  data-aos="fade-up" alt=""></img>
+            <img src={bg2} data-aos="fade-up" alt=""></img>
           </div>
         </div>
       </section>
@@ -227,25 +228,25 @@ export default function Home() {
                 Message me here
               </p>
               <div className="p-2">
-              <img
-                src={Gmail}
-                className="m-2 inline hover:text-white"
-                alt=""
-              ></img>
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
-                className="hover:text-white text-xs md:text-base "
-              >
-                shinoyshinoo@gmail.com{" "}
-              </a>
-              <br />
-              <img src={Disc} className="m-2 inline " alt=""></img>
-              <a
-                href="https://discord.com/login"
-                className="hover:text-white text-xs md:text-base"
-              >
-                falcon #0900
-              </a>
+                <img
+                  src={Gmail}
+                  className="m-2 inline hover:text-white"
+                  alt=""
+                ></img>
+                <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
+                  className="hover:text-white text-xs md:text-base "
+                >
+                  shinoyshinoo@gmail.com{" "}
+                </a>
+                <br />
+                <img src={Disc} className="m-2 inline " alt=""></img>
+                <a
+                  href="https://discord.com/login"
+                  className="hover:text-white text-xs md:text-base"
+                >
+                  falcon #0900
+                </a>
               </div>
             </div>
           </div>

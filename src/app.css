@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+body::-webkit-scrollbar {
+  width: 0.55rem;
+}
+body::-webkit-scrollbar-track {
+  background: gray;
+}
+body::-webkit-scrollbar-track:hover {
+  background: black;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgb(126 34 206);
+}
 body {
   color: gray;
   background-color: #282c33;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Fira Code", monospace;
- 
 }
 header {
   background-color: #282c33;
-
 }
 
 h1 {
@@ -132,45 +142,42 @@ img {
   cursor: pointer;
 }
 
-.menu-items{
+.menu-items {
   display: flex;
-  @media(max-width:767px){
+  @media (max-width: 767px) {
     display: none;
     left: -110%;
   }
 }
 
-.menu-items.active{
+.menu-items.active {
   display: flex;
   position: absolute;
-  flex-direction:  column;
+  flex-direction: column;
   background-color: #282c33;
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   align-items: center;
   justify-content: space-evenly;
   padding-block: 30vh;
   top: 0;
   left: 0%;
   animation: left-to-right 0.5s ease-in;
-  position: fixed;
   overflow: hidden;
 }
-.menu-icon{
+.menu-icon {
   z-index: 1000;
   margin-right: 1rem;
 }
 @keyframes left-to-right {
-  0%{
-      transform: translateX(100%);
+  0% {
+    transform: translateX(100%);
   }
 
-  100%{
-      transform:translateX(0%);
+  100% {
+    transform: translateX(0%);
   }
 }
-
-
 
 /* functionality */
 /* .checkbox:checked ~ .background {
