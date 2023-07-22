@@ -146,7 +146,7 @@ img {
   flex-direction:  column;
   background-color: #282c33;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   align-items: center;
   justify-content: space-evenly;
   padding-block: 30vh;
@@ -154,6 +154,7 @@ img {
   left: 0%;
   animation: left-to-right 0.5s ease-in;
   position: fixed;
+  overflow: hidden;
 }
 .menu-icon{
   z-index: 1000;
