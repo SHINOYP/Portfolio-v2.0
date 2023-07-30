@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 export default function About() {
@@ -42,7 +43,7 @@ export default function About() {
           </p>
         </div>
         <div className="m-20 md:m-10 ">
-          <img data-aos="zoom-in" src={bg2} alt=""></img>
+          <LazyLoadImage data-aos="zoom-in" src={bg2} alt=""></LazyLoadImage>
         </div>
       </section>
       <section className=" mx-auto  width_limit ">
@@ -70,11 +71,12 @@ export default function About() {
                 Message me here
               </p>
               <div className="p-2">
-                <img
+                <LazyLoadImage
+                  loading="lazy"
                   src={Gmail}
                   className="m-2 inline hover:text-white"
                   alt=""
-                ></img>
+                ></LazyLoadImage>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
                   className="hover:text-white text-xs md:text-base "
@@ -82,12 +84,12 @@ export default function About() {
                   shinoyshinoo@gmail.com{" "}
                 </a>
                 <br />
-                <img
+                <LazyLoadImage
                   src={Disc}
                   data-aos="fade-up"
                   className="m-2 inline  "
                   alt=""
-                ></img>
+                ></LazyLoadImage>
                 <a
                   href="https://discord.com/login"
                   className="hover:text-white text-xs md:text-base"

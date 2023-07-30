@@ -1,6 +1,7 @@
 import Git from "../img/git.svg";
 import Inst from "../img/instagram.svg";
 import { motion } from "framer-motion";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 export default function footer() {
@@ -17,7 +18,7 @@ export default function footer() {
           whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
         >
           <a href="https://beacons.ai/shino.io">
-            <img src={Inst} className="" alt=""></img>
+            <LazyLoadImage src={Inst} className="" alt=""></LazyLoadImage>
           </a>
         </motion.div>
         <motion.div
@@ -26,7 +27,7 @@ export default function footer() {
           whileTap={{ scale: 0.8, rotate: -90, borderRadius: "100%" }}
         >
           <a href="https://github.com/Shinoyp">
-            <img src={Git} className="mr-2" alt=""></img>
+            <LazyLoadImage src={Git} className="mr-2" alt=""></LazyLoadImage>
           </a>
         </motion.div>
       </div>

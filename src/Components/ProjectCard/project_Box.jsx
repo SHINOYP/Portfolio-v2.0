@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 export default function Project_box({ data }) {
@@ -16,13 +17,13 @@ export default function Project_box({ data }) {
       <div className="flip-card-inner">
         <div
           data-aos="fade-up"
-          className="flip-card-front  bg-gradient-to-r from-indigo-800 via-purple-800 to-gray-700  "
+          className="flip-card-front  bg-gradient-to-r from-purple-900   to-gray-700  "
         >
-          <img
+          <LazyLoadImage 
             alt=""
             src={`${data?.image}`}
             className=" border rounded-md border-purple-700 mb-1 mx-auto "
-          ></img>
+          ></LazyLoadImage>
           {/* <a href={data.link} className="">
           Visit
         </a> */}

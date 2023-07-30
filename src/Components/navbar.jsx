@@ -7,6 +7,7 @@ import Disc from "../img/discord.svg";
 import Gmail from "../img/gmail.svg";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 
@@ -20,12 +21,12 @@ export default function Navbar() {
         style={{ zIndex: 1000 }}
       >
         <div onClick={()=>navigate('/')} className="flex items-center">
-          <img
+          <LazyLoadImage 
             src={LOGO}
             className="px-3 "
             alt=""
             style={{ width: "50px", height: "50px", zIndex: 3000 }}
-          ></img>
+          ></LazyLoadImage>
           <p
             className="font-bold  text-white md:text-lg text-base"
             style={{ zIndex: 3000 }}
@@ -58,16 +59,16 @@ export default function Navbar() {
                 href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
                 className=" mx-2"
               >
-                <img src={Gmail} alt=""></img>{" "}
+                <LazyLoadImage src={Gmail} alt=""></LazyLoadImage>{" "}
               </a>
               <a href="https://discord.com/login">
-                <img src={Disc} className="mx-2" alt=""></img>
+                <LazyLoadImage src={Disc} className="mx-2" alt=""></LazyLoadImage>
               </a>
               <a href="https://github.com/Shinoyp">
-                <img src={Git} className="mx-2" alt=""></img>
+                <LazyLoadImage src={Git} className="mx-2" alt=""></LazyLoadImage>
               </a>
               <a href="https://www.instagram.com/shinoy._.p/">
-                <img src={Inst} className="mx-2" alt=""></img>
+                <LazyLoadImage src={Inst} className="mx-2" alt=""></LazyLoadImage>
               </a>
             </div>
         </div>

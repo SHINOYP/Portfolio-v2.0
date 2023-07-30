@@ -15,6 +15,7 @@ import ProjectBox from "../Components/ProjectCard/project_Box";
 import SelfPotrait from "../img/mine.png";
 import BlobAnimation from "../Components/BlobAnimation/BlobAnimation";
 import TyingAnimation from "../Components/TypingAnimation";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 export default function Home() {
@@ -131,7 +132,7 @@ export default function Home() {
         </div>
         <div className="md:flex  flex-col md:flex-row">
           <div className="md:m-10 m-20  ">
-            <img src={Skill} alt=""></img>
+            <LazyLoadImage src={Skill} alt=""></LazyLoadImage>
           </div>
           <div
             data-aos="fade-up"
@@ -198,7 +199,7 @@ export default function Home() {
             </form>
           </div>
           <div className="m-20 md:m-10 ">
-            <img src={bg2} data-aos="fade-up" alt=""></img>
+            <LazyLoadImage src={bg2} data-aos="fade-up" alt=""></LazyLoadImage>
           </div>
         </div>
       </section>
@@ -228,11 +229,11 @@ export default function Home() {
                 Message me here
               </p>
               <div className="p-2">
-                <img
+                <LazyLoadImage
                   src={Gmail}
                   className="m-2 inline hover:text-white"
                   alt=""
-                ></img>
+                ></LazyLoadImage>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
                   className="hover:text-white text-xs md:text-base "

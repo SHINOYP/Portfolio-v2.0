@@ -7,23 +7,13 @@ import Sharigan from "./Components/sharigan/Sharigan";
 const React = require("react");
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2200);
-  });
-  if (loading) {
-    return <Sharigan />;
-  } else {
-    return (
-      <div className="App">
-        <Router>
-          <Navbar />
-          <AnimatedRoutes />
-          <Footer />
-        </Router>
-      </div>
-    );
-  }
+  return (
+    <div className="App">
+      <Router>
+        <Navbar />
+        <AnimatedRoutes />
+        <Footer />
+      </Router>
+    </div>
+  );
 }

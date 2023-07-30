@@ -5,7 +5,7 @@
     height: 300px;
     margin-top: 3rem;
     @media(max-width:767px) {
-        width: 80vw;
+        width: 90vw;
         height: 250px;
     }
   }
@@ -45,7 +45,7 @@
 
     @media(max-width:767px) {
         height: fit-content;
-        width: 80vw;
+        width: 90vw;
         
     }
   }
