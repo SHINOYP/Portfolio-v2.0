@@ -17,7 +17,7 @@ export default function Project_box({ data }) {
       <div className="flip-card-inner">
         <div
           data-aos="fade-up"
-          className="flip-card-front  bg-gradient-to-r from-purple-900   to-gray-700  "
+          className="flip-card-front  border-2 border-gray-500  "
         >
           <LazyLoadImage 
             alt=""
@@ -29,22 +29,19 @@ export default function Project_box({ data }) {
         </a> */}
           <div className="flex flex-col  ">
             <h4 className=" font-bold text-lg text-white">{data.name}</h4>
-            <p className="  mr-2 leading-4 overflow-hidden  text-[10px] md:text-xs text-white">
+            <p className="  mr-2 leading-4 overflow-hidden  text-[10px] text-justify md:text-xs text-white">
               {data.description}
             </p>
           </div>
         </div>
         <div class="flip-card-back">
           <a href={data.link}>
-            <GitHubIcon
-              sx={{ fontSize: "3rem" }}
-              className="m-3 hover:text-purple-500"
-            />
-          </a>
           <LiveTvIcon
             sx={{ fontSize: "3rem" }}
             className="m-3 hover:text-purple-500"
           />
+          </a>
+        
         </div>
       </div>
     </div>

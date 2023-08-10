@@ -162,7 +162,7 @@ img {
   padding-block: 30vh;
   top: 0;
   left: 0%;
-  animation: left-to-right 0.5s ease-in;
+  animation: left-to-right 0.3s ease-in;
   overflow: hidden;
 }
 .menu-icon {

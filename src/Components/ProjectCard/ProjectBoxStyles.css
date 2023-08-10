@@ -52,16 +52,16 @@
   
   .flip-card-back {
     transform: rotateY(180deg);
-    width: 400px;
+    width: 350px;
     border-radius: 2%;
-    height: 300px;
+    height: 250px;
     display: flex;
     background: black;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     @media(max-width:767px) {
-        width: 80vw;
+        width: 90vw;
     }
   }
   
