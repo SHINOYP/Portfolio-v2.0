@@ -2,7 +2,7 @@ export const projects = [
   {
     id: "1",
     name: "Gixxel",
-    link: "https://github.com/SHINOYP/Gixxel",
+    link: "https://gixxel.vercel.app/",
     image: require("./img/screenshots/Gixxel.png"),
     description:
       "With Gixxel, you can explore a vast collection of movies, discover new releases, and access detailed information about your favorite films.",
@@ -47,7 +47,7 @@ export const projects = [
   {
     id: "6",
     name: "Adam car Rental ",
-    link: "https://shinoyp.github.io",
+    link: "https://shinoyp.github.io/",
     image: require("./img/screenshots/Adam.png"),
     description: "Car Rental Invoice printing application",
   },
