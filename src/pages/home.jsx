@@ -1,21 +1,17 @@
-import { useState } from "react";
-import SIT_img from "../img/sit.svg";
-import Coming_soon from "../img/working.png";
+import "aos/dist/aos.css";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { projects } from "../Data";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import Skill from "../img/skill-bg.svg";
 import Disc from "../img/discord.svg";
 import Gmail from "../img/gmail.svg";
-import { motion } from "framer-motion";
-import { useEffect } from "react";
-import { projects } from "../Data";
 import Aos from "aos";
-import "aos/dist/aos.css";
 import bg2 from "../img/bg-2.svg";
-import { useNavigate } from "react-router-dom";
 import ProjectBox from "../Components/ProjectCard/project_Box";
-import SelfPotrait from "../img/mine.png";
 import BlobAnimation from "../Components/BlobAnimation/BlobAnimation";
 import TyingAnimation from "../Components/TypingAnimation";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 const React = require("react");
 
 export default function Home() {
@@ -48,32 +44,34 @@ export default function Home() {
       exit={{ opacity: 0 }}
     >
       <section>
-        <div className="md:flex justify-between mx-auto width_limit">
-          <div className="mt-20 ml-2 md:ml-10 font-semibold ">
-            <h1 className="md:text-5xl text-4xl">
+        <div className="justify-between mx-auto md:flex width_limit">
+          <div className="mt-20 ml-2 font-semibold md:ml-10 ">
+            <h1 className="text-4xl md:text-5xl">
               {" "}
               <TyingAnimation text={"hi iam a"} speed={"100"} />
               <span>
                 {" "}
                 <br />
-                <TyingAnimation text={"Web Developer"} speed={"200"} />
+                <TyingAnimation
+                  text={"Software Development Engineer"}
+                  speed={"200"}
+                />
               </span>
             </h1>
-            <p className=" my-2 text-base md:text-lg ">
-              He who crafts responsive website where technologies meet
-              creativity
+            <p className="my-2 text-base md:text-lg">
+              He who crafts software where technologies meet creativity
             </p>
-            <form className=" text-sm">
-              <button className="border-solid border-2 border-purple-700  hover:bg-purple-700 md:px-2 md:my-4 md:px-6 px-2 md:py-1 -py-1 my-1 md:my-2">
-                <span onClick={() => navigate("/Contact")}>contact me !!</span>
+            <form className="text-sm ">
+              <button className="px-2 my-1 border-2 border-purple-700 border-solid hover:bg-purple-700 md:px-2 md:my-4 md:px-6 md:py-1 -py-1 md:my-2">
+                <a href="https://wa.me/+918589922327">contact me !!</a>
               </button>
             </form>
           </div>
-          <div className="m-10 flex-col ">
+          <div className="flex-col m-10 ">
             <BlobAnimation />
-            {/* <img src={SelfPotrait} data-aos="zoom-out"  className="rounded-full sm:w-2/3  " alt=""></img> */}
-            {/* <div className="flex w-fit border-2 border-zinc-400 ml-3  xl:ml-16">           
-              <p className="flex mx-auto    text-xs align-center md:mx-10 mx-1">
+            {/* <img src={SelfPotrait} data-aos="zoom-out"  className="rounded-full sm:w-2/3 " alt=""></img> */}
+            {/* <div className="flex ml-3 border-2 w-fit border-zinc-400 xl:ml-16">           
+              <p className="flex mx-1 mx-auto text-xs align-center md:mx-10">
                 Currently working on improving skills.
               </p>
             </div> */}
@@ -82,31 +80,31 @@ export default function Home() {
       </section>
       <section>
         <div className="flex flex-col mx-3">
-          <div className="border mx-auto  mt-6 p-4 ">
+          <div className="p-4 mx-auto mt-6 border ">
             <h1 className="text-xs md:text-base">
               {" "}
               Consistency is the key to success !
             </h1>
           </div>
-          <div className=" mx-auto ">
-            <h1 className="-bottom-0  border  md:ml-96 md:px-6  text-wid  p-1 text-xs">
+          <div className="mx-auto ">
+            <h1 className="p-1 text-xs border -bottom-0 md:ml-96 md:px-6 text-wid">
               -____{" "}
             </h1>
           </div>
         </div>
       </section>
 
-      <section className=" mx-auto width_limit">
-        <div className=" flex justify-between  md:ml-10 ml-4  mt-10 items-center ">
+      <section className="mx-auto width_limit">
+        <div className="flex items-center justify-between mt-10 ml-4 md:ml-10">
           <div>
-            <h1 className="md:text-2xl text-xl font-semibold ">
+            <h1 className="text-xl font-semibold md:text-2xl ">
               <span> #</span>projects<span>--------</span>{" "}
             </h1>
           </div>
           <div>
             <span
               onClick={() => navigate("/Project")}
-              className="hover:text-white mr-6 text-xs "
+              className="mr-6 text-xs hover:text-white "
             >
               view all --
             </span>
@@ -114,85 +112,87 @@ export default function Home() {
         </div>
 
         <div className="flex flex-wrap mx-6 mt-10 sm:mt-0 ">
-          {projects?.map((pr) => (
-            <div key={pr.id} data-aos="">
+          {projects?.map((pr, index) => (
+            <div key={index} data-aos="">
               <ProjectBox key={pr.id} data={pr} />
             </div>
           ))}
         </div>
       </section>
 
-      <section className=" mx-auto width_limit">
-        <div className=" flex justify-between  md:ml-10 ml-4  mt-10 my-20 ">
+      <section className="mx-auto width_limit">
+        <div className="flex justify-between my-20 mt-10 ml-4 md:ml-10">
           <div className="">
-            <h1 className="md:text-2xl text-xl font-semibold">
+            <h1 className="text-xl font-semibold md:text-2xl">
               <span> #</span>skills<span>--------</span>{" "}
             </h1>
           </div>
         </div>
-        <div className="md:flex  flex-col md:flex-row">
-          <div className="md:m-10 m-20  ">
+        <div className="flex-col md:flex md:flex-row">
+          <div className="m-20 md:m-10 ">
             <LazyLoadImage src={Skill} alt=""></LazyLoadImage>
           </div>
           <div
             data-aos="fade-up"
-            className="md:flex  md:ml-4 m-2  flex-col md:flex-row"
+            className="flex-col m-2 md:flex md:ml-4 md:flex-row"
           >
-            <div className=" text-md font-bold  pic hide md:w-40  h-32 border border-purple-700 m-2 ">
-              <h3 className=" border-b-2 border-b text-white p-2">Languages</h3>
+            <div className="h-32 m-2 font-bold border border-purple-700 text-md pic hide md:w-40">
+              <h3 className="p-2 text-white border-b border-b-2 ">Languages</h3>
               {/* &nbsp;&nbsp;C &nbsp;&nbsp;&nbsp; C++&nbsp;&nbsp;&nbsp; */}
-              &nbsp;&nbsp;Html&nbsp;&nbsp;&nbsp;Css &nbsp;JavaScript&nbsp;
-              &nbsp;C,C++
+              &nbsp;Html&nbsp;JavaScript &nbsp;Css&nbsp;Typescript&nbsp;
+              &nbsp;C,C++ &nbsp;Java
             </div>
             <div
               data-aos="fade-up"
-              className=" text-lg pic hide md:w-40 h-32 border border-purple-700 m-2"
+              className="h-32 m-2 text-lg border border-purple-700 pic hide md:w-40"
             >
-              <h3 className=" border-b-2 border-b text-white p-2">Databases</h3>
-              &nbsp;&nbsp;Mysql &nbsp;&nbsp;MongoDb&nbsp;&nbsp;&nbsp;&nbsp;
+              <h3 className="p-2 text-white border-b border-b-2 ">Databases</h3>
+              &nbsp;Mysql&nbsp;MongoDb&nbsp;&nbsp; &nbsp;PostgreSql
             </div>
             <div
               data-aos="fade-up"
-              className=" pic  text-lg hide md:w-40 h-32 border border-purple-700 m-2"
+              className="h-32 m-2 text-lg border border-purple-700 pic hide md:w-40"
               style={{ width: "auto" }}
             >
-              <h3 className=" border-b-2 border-b text-white text-xl p-2">
+              <h3 className="p-2 text-xl text-white border-b border-b-2 ">
                 Tools
               </h3>
               &nbsp;&nbsp;React&nbsp;&nbsp;&nbsp;&nbsp;Tailwind&nbsp;&nbsp;&nbsp;&nbsp;Node.js&nbsp;
-              &nbsp;&nbsp;Express
+              &nbsp;&nbsp;Express&nbsp;&nbsp;&nbsp;&nbsp;Nextjs &nbsp; Aws
             </div>
           </div>
         </div>
       </section>
 
-      <section className=" mx-auto  width_limit">
-        <div className=" flex justify-between md:ml-10 ml-4  mt-10  ">
+      <section className="mx-auto width_limit">
+        <div className="flex justify-between mt-10 ml-4 md:ml-10">
           <div className="">
-            <h1 className="md:text-2xl text-xl font-semibold">
+            <h1 className="text-xl font-semibold md:text-2xl">
               <span> #</span>about<span>--------</span>{" "}
             </h1>
           </div>
         </div>
-        <div className="flex  flex-col md:flex-row justify-between mx-auto">
-          <div className="mt-10 md:ml-10 ml-4  md:bg-60px ">
-            <p className=" text-sm md:text-base  font-semibold ">
+        <div className="flex flex-col justify-between mx-auto md:flex-row">
+          <div className="mt-10 ml-4 md:ml-10 md:bg-60px ">
+            <p className="text-sm font-semibold md:text-base">
               I’m a self-taught Full Stack developer based in kerala,India. I
               can develop responsive websites from scratch and raise them into
               modern user-friendly web experiences. As i was looking for a
               domain to chose i stumpled upon fullstack web development,in which
               iam pretty intereted in .Trying to transform my creativity and
               knoledge into a website. I always strive to learn about the newest
-              technologies and frameworks. Iam trying to work my way upto a full
-              stack developer.
+              technologies and frameworks. I can also develop other desktop,
+              mobile applications. I can pretty much develop any kind of
+              software
               <br />
               <br />
               As for my educational iam a Computer Engineering Diploma Holder
+              Current pursuing Btech in computer science and engineering
             </p>
             <form className="">
               <button
                 onClick={() => navigate("/About")}
-                className="border-solid border-2 border-purple-700 hover:bg-purple-700 md:px-4 md:py-1 px-2 mt-10  text-xs "
+                className="px-2 mt-10 text-xs border-2 border-purple-700 border-solid hover:bg-purple-700 md:px-4 md:py-1 "
               >
                 <span>View all -- </span>
               </button>
@@ -204,47 +204,47 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" mx-auto  width_limit">
-        <div className=" flex justify-between md:ml-10 ml-4  mt-6  ">
+      <section className="mx-auto width_limit">
+        <div className="flex justify-between mt-6 ml-4 md:ml-10">
           <div className="">
-            <h1 className="md:text-2xl text-xl font-semibold ">
+            <h1 className="text-xl font-semibold md:text-2xl ">
               #Contacts<span>--------</span>{" "}
             </h1>
           </div>
         </div>
-        <div className="flex  flex-col md:flex-row justify-between mx-auto">
-          <div className="mt-10 md:ml-10 ml-4  font-semibold ">
+        <div className="flex flex-col justify-between mx-auto md:flex-row">
+          <div className="mt-10 ml-4 font-semibold md:ml-10 ">
             <p className="text-sm md:text-base">
               I’m interested in Job opportunities including freelance . However,
               if you have other request or question, don’t hesitate to contact
               me
             </p>
           </div>
-          <div className="md:m-10  m-4">
+          <div className="m-4 md:m-10">
             <div
-              className=" w-64 h-32 border  md:m-2 pic hide -z-20  "
+              className="w-64 h-32 border md:m-2 pic hide -z-20"
               data-aos="fade-up"
             >
-              <p className=" mt-2 font-bold mx-4 text-white text-xs md:text-base">
+              <p className="mx-4 mt-2 text-xs font-bold text-white md:text-base">
                 Message me here
               </p>
               <div className="p-2">
                 <LazyLoadImage
                   src={Gmail}
-                  className="m-2 inline hover:text-white"
+                  className="inline m-2 hover:text-white"
                   alt=""
                 ></LazyLoadImage>
                 <a
                   href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinoyshinoo@gmail.com"
-                  className="hover:text-white text-xs md:text-base "
+                  className="text-xs hover:text-white md:text-base "
                 >
                   shinoyshinoo@gmail.com{" "}
                 </a>
                 <br />
-                <img src={Disc} className="m-2 inline " alt=""></img>
+                <img src={Disc} className="inline m-2 " alt=""></img>
                 <a
                   href="https://discord.com/login"
-                  className="hover:text-white text-xs md:text-base"
+                  className="text-xs hover:text-white md:text-base"
                 >
                   falcon #0900
                 </a>
