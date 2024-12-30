@@ -1,0 +1,10 @@
+---
+name: Shinoy p
+email: shinoyshinoo@gmail.com
+linkedin: 'https://www.linkedin.com/in/shinoyp/'
+github: 'https://github.com/SHINOYP'
+phoneNo: '8589922327'
+profilePic: /passport.jpeg
+resumeLink: 'https://github.com/SHINOYP'
+---
+
