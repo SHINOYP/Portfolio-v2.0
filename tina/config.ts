@@ -46,6 +46,12 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "string",
+            name: "title",
+            label: "Title",
+            required: true,
+          },
+          {
             name: "linkedin",
             label: "Linkedin",
             type: "string",
@@ -75,31 +81,49 @@ export default defineConfig({
             label: "Resume Link",
             required: true,
           },
-        ],
-      },
-      {
-        name: "post",
-        label: "Posts",
-        path: "content/posts",
-        fields: [
           {
+            name: "experience",
             type: "string",
-            name: "title",
-            label: "Title",
-            isTitle: true,
+            label: "Experience",
             required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
+            name: "totalProjects",
+            type: "string",
+            label: "Total Projects",
+            required: true,
           },
         ],
-        ui: {
-          // This is an DEMO router. You can remove this to fit your site
-          router: ({ document }) => `/demo/blog/${document._sys.filename}`,
-        },
+      },
+      {
+        name: "projects",
+        label: "Projects",
+        path: "content/projects",
+        fields: [
+          {
+            name: "projectName",
+            type: "string",
+            label: "Project Name",
+            required: true,
+          },
+
+          {
+            name: "projectDescription",
+            type: "string",
+            label: "Project Description",
+          },
+          {
+            name: "projectLink",
+            label: "Project Link",
+            type: "string",
+          },
+          {
+            name: "projectImage",
+            label: "Project Image",
+            type: "image",
+            required: true,
+          },
+        ],
       },
     ],
   },
