@@ -7,7 +7,6 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "assets.tina.io",
         port: "",
-        pathname: "/account123/**",
         search: "",
       },
     ],
