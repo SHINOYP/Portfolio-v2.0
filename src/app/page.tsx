@@ -17,10 +17,11 @@ export default async function Home() {
             <div className='relative w-full h-40'>
               {project?.node?.projectImage && (
                 <Image
-                  src={project?.node?.projectImage}
+                  src={decodeURIComponent(project?.node?.projectImage)}
                   alt={project?.node?.projectName}
                   className=" rounded"
                   fill
+
                 />
               )}
             </div>
