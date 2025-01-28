@@ -39,7 +39,7 @@ export default async function RootLayout({
       >
         <AnimatedFavicon />
 
-        <section className=" shadow-indigo-500/40 bg-black flex md:flex-col md:justify-normal  border border-slate-700  justify-evenly shadow-2xl rounded-lg  md:w-[25%] md:h-[95vh]  max-w-[95vw] w-full md:max-w-5xl mt-10 md:mx-auto mx-auto  text-white p-8" >
+        <section className=" shadow-indigo-500/40 bg-black flex md:flex-col md:justify-normal sm:justify-evenly  border border-slate-700  justify-between md:shadow-2xl rounded-lg  md:w-fit md:min-w-[25%] md:h-[95vh]  max-w-[95vw] w-full md:max-w-5xl md:mt-10 mt-4 md:mx-auto mx-auto  text-white p-8" >
           <div className="rounded-xl md:mx-auto  relative overflow-hidden md:h-40 h-32 w-32 md:w-40 bg-white">
             <Image
               src={data.user.profilePic}
@@ -62,7 +62,7 @@ export default async function RootLayout({
             </div>
           </div>
         </section >
-        <section className="border  bg-black border-slate-700 shadow-indigo-500/40 flex flex-col  shadow-2xl rounded-lg w-full md:w-[70%] md:h-[95vh] max-w-[95vw] md:max-w-5xl h-screen md:mt-10 mt-2 mx-auto text-white px-8 pb-8 pt-6">
+        <section className="border  bg-black border-slate-700 shadow-indigo-500/40 flex flex-col  shadow-2xl rounded-lg w-full md:w-[70%] md:h-[95vh] max-w-[95vw] md:max-w-5xl h-screen md:mt-10 mt-2 mx-auto text-white  md:px-8 px-4 pb-8 pt-6">
           <ButtonTray />
           <div className="overflow-y-scroll no-scrollbar overflow-x-hidden">
             {children}

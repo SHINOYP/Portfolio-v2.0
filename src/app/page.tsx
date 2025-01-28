@@ -8,7 +8,7 @@ export default async function Home() {
     const postsResponse = await client.queries.projectsConnection();
 
     return (
-      <section className="grid grid-cols-1 md:grid-cols-2   gap-4 p-4">
+      <section className="grid grid-cols-1 md:grid-cols-2   gap-4 mt-2  ">
         {postsResponse.data.projectsConnection?.edges?.map((project) => (
           <div key={project?.node?.id} className="p-4 0 shadow-2xl  border-slate-700 border rounded ">
             {project?.node?.projectDescription && (
@@ -25,7 +25,7 @@ export default async function Home() {
                 />
               )}
             </div>
-            <h2 className="text-xl mt-2  text-center">{project?.node?.projectName}</h2>
+            <h2 className="md:text-xl text-lg italic mt-2  text-center">{project?.node?.projectName}</h2>
           </div>
         ))}
       </section>
