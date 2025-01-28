@@ -35,21 +35,23 @@ export default async function RootLayout({
     <html lang="en">
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} md:max-w-6xl md:w-full md:mx-auto md:flex-row antialiased flex flex-col min-h-screen dark`}
+        className={`${geistSans.variable} ${geistMono.variable} md:max-w-6xl md:w-full md:mx-auto md:flex-row bg-slate-950 md:bg-black antialiased flex flex-col min-h-screen `}
       >
         <AnimatedFavicon />
 
-        <section className=" shadow-indigo-500/40 bg-black flex md:flex-col md:justify-normal sm:justify-evenly  border border-slate-700  justify-between md:shadow-2xl rounded-lg  md:w-fit md:min-w-[25%] md:h-[95vh]  max-w-[95vw] w-full md:max-w-5xl md:mt-10 mt-4 md:mx-auto mx-auto  text-white p-8" >
-          <div className="rounded-xl md:mx-auto  relative overflow-hidden md:h-40 h-32 w-32 md:w-40 bg-white">
-            <Image
-              src={data.user.profilePic}
-              alt="profile picture of the author"
+        <section className="bg-slate-950 shadow-indigo-500/40  flex md:flex-col md:justify-normal sm:justify-evenly  md:border border-slate-700   md:shadow-2xl rounded-lg  md:w-fit md:min-w-[25%] md:h-[95vh]  max-w-[95vw] w-full md:max-w-5xl md:mt-10 mt-4 md:mx-auto mx-auto  text-white p-8" >
+          <div className="w-1/2 md:w-full">
+            <div className="rounded-xl md:mx-auto  relative overflow-hidden md:h-40 h-32 w-32 md:w-40 bg-white">
+              <Image
+                src={data.user.profilePic}
+                alt="profile picture of the author"
 
-              fill
+                fill
 
-            />
+              />
+            </div>
           </div>
-          <div className="md:w-full  md:mt-6">
+          <div className="md:w-full w-1/2  md:mt-6 ">
             <h1 className="text-white md:text-center text-2xl font-bold">{data.user.name}</h1>
             <h2 className="text-white  md:text-center    ">Software Engineer</h2>
             <div className="flex md:justify-center md:gap-4 gap-3 md:mt-4 mt-2">
@@ -62,7 +64,7 @@ export default async function RootLayout({
             </div>
           </div>
         </section >
-        <section className="border  bg-black border-slate-700 shadow-indigo-500/40 flex flex-col  shadow-2xl rounded-lg w-full md:w-[70%] md:h-[95vh] max-w-[95vw] md:max-w-5xl h-screen md:mt-10 mt-2 mx-auto text-white  md:px-8 px-4 pb-8 pt-6">
+        <section className="md:border  bg-slate-950 border-slate-700  flex flex-col rounded-lg w-full md:w-[70%] md:h-[95vh] max-w-[95vw] md:max-w-5xl h-screen md:mt-10 mt-0 mx-auto text-white  md:px-8 px-4 pb-8 pt-6">
           <ButtonTray />
           <div className="overflow-y-scroll no-scrollbar overflow-x-hidden">
             {children}

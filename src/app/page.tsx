@@ -10,7 +10,7 @@ export default async function Home() {
     return (
       <section className="grid grid-cols-1 md:grid-cols-2   gap-4 mt-2  ">
         {postsResponse.data.projectsConnection?.edges?.map((project) => (
-          <div key={project?.node?.id} className="p-4 0 shadow-2xl  border-slate-700 border rounded ">
+          <div key={project?.node?.id} className="pb-2 shadow-2xl  border-slate-700 border rounded ">
             {project?.node?.projectDescription && (
               <p className="mt-2">{project?.node?.projectLink}</p>
             )}
@@ -19,7 +19,7 @@ export default async function Home() {
                 <Image
                   src={project?.node?.projectImage}
                   alt={project?.node?.projectName}
-                  className=" rounded"
+                  className=" rounded-t"
                   fill
 
                 />

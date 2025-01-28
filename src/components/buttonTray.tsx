@@ -13,7 +13,7 @@ function ButtonTray() {
     ];
 
     return (
-        <div className="flex space-x-10 mx-auto  px-3 py-2 ">
+        <div className="flex space-x-10 mx-auto  px-3 py-4 ">
             {navLinks.map((link) => (
                 <Link
                     key={link.href}
