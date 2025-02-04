@@ -18,7 +18,7 @@ function ButtonTray() {
                 <Link
                     key={link.href}
                     href={link.href}
-                    className={`font-semibold transition duration-300 ${pathname === link.href ? ' border-b border-blue-700' : 'text-white hover:text-blue-700'
+                    className={`font-semibold transition text-lg duration-300 ${pathname === link.href ? ' border-b border-blue-700' : 'text-white hover:text-blue-700'
                         }`}
                 >
                     {link.label}
